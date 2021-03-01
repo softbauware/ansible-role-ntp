@@ -33,7 +33,7 @@ jobs:
         run: |
           pip install --upgrade ansible
           sudo apt update
-          sudo apt install -y python3-apt
+          sudo apt install -y python-apt
           ansible --version
 
       - name: Run Playbook in Check Mode

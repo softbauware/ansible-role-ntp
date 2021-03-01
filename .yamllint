@@ -10,7 +10,7 @@ rules:
   document-end: disable
   document-start: enable
   empty-lines: enable
-  empty-values: enable
+  empty-values: disable
   hyphens: enable
   indentation: enable
   key-duplicates: enable

@@ -68,6 +68,12 @@ ntp_servers:
   - "3{{ '.' + ntp_area if ntp_area else '' }}.pool.ntp.org iburst"
 ```
 
+Sets the keyword used for servers in the NTP configuration file. The keyword pool is a good choice when DNS resolve is an option, if not you should use server instead.
+
+```yaml
+ntp_server_keyword: "pool"
+```
+
 Specify the NTP servers you'd like to use. Only takes effect if you allow this role to manage NTP's configuration, by setting `ntp_manage_config` to `True`.
 
 ```yaml

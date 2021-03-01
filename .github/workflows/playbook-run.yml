@@ -32,7 +32,8 @@ jobs:
       - name: Install Software Requirements
         run: |
           pip install --upgrade ansible
-          pip install --upgrade python-apt
+          apt update
+          apt install -y python3-apt
           ansible --version
 
       - name: Run Playbook in Check Mode

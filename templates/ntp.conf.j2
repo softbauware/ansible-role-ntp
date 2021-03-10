@@ -28,9 +28,6 @@ tinker panic 0
 
 # Permit time synchronization with our time source, but do not
 # permit the source to query or modify the service on this system.
-restrict default nomodify notrap nopeer noquery
-
-# Allow pool associations
 restrict source nomodify notrap noquery
 
 # Permit all access over the loopback interface.  This could

@@ -18,7 +18,7 @@ ntp_servers:
   - "2{{ '.' + ntp_area if ntp_area else '' }}.pool.ntp.org iburst"
   - "3{{ '.' + ntp_area if ntp_area else '' }}.pool.ntp.org iburst"
 
-ntp_server_keyword: "pool"
+ntp_server_keyword: "server"
 
 ntp_restrict:
   - "127.0.0.1"

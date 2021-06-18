@@ -20,10 +20,14 @@ filegen clockstats file clockstats type day enable
 tinker panic 0
 {% endif %}
 
+restrict default notrust nomodify nopeer noquery notrap
+restrict 127.0.0.1
+
 # Use public servers from the pool.ntp.org project.
 # Please consider joining the pool (http://www.pool.ntp.org/join.html).
 {% for item in ntp_servers %}
 {{ ntp_server_keyword }} {{ item }}
+restrict {{ item }} nomodify notrap noquery
 {% endfor %}
 
 # Permit time synchronization with our time source, but do not
